@@ -1,0 +1,82 @@
+
+/* fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body{
+    min-height: 100px;
+}
+
+table, th ,td{
+    border:solid 2px #c8d14d !important;
+    color: #dfdfdf;
+}
+
+th{
+    color: #eeff00 !important;
+}
+
+i{
+    color: #fbff00af;
+}
+
+i:hover{
+    color: #fbff00ea;
+}
+
+input, textarea{
+    background: linear-gradient(#111111,#353535) !important;
+
+    border: #242424 !important;
+    color: #ffffff !important;
+}
+
+.textErro{
+    display: none;
+    color: #920000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* CLASS */
+
+.cabin-font{
+    font-family:'Cabin', sans-serif;
+}
+
+
+.nav-link:hover, .navbar-brand:hover{
+    color:#c300ff !important;
+}
+
+.button:hover{
+    border-bottom:solid 1px #1a1a1a !important;
+}
+
+button{
+    border-bottom:solid 5px #1a1a1a  !important;
+}
+
+.fs-form{
+    font-size:26px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width:991px){
+
+    #button_dell , #button_save, #button_list{
+        margin:10px 40px 10px 20px !important;
+        padding: 10px 15px !important;
+
+    }
+
+    .navbar-dark .navbar-toggler {
+        color: #1a1524;
+        border:#1a1524;
+    }
+
+    .navbar-dark .navbar-toggler:hover {
+        color: #b638ff;
+        border:#b638ff;
+    }
+}

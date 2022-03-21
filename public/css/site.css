@@ -1,0 +1,105 @@
+/* fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body{
+    min-height: 100px;
+    background-image: linear-gradient(to bottom right, #f8f847, #bd7bff);
+}
+
+#biografia{
+    background: #c2bc6e4d;
+box-shadow: 0 8px 32px 0 #6868688f;
+backdrop-filter: blur( 3px );
+-webkit-backdrop-filter: blur( 3px );
+border: 2px solid #b364af48!important;
+}
+
+#Home:hover{
+    color: #fbff00 !important;
+}
+
+footer{
+    margin-top: px;
+}
+
+i{
+    font-size: 50px;
+    color: #000000a9;
+}
+
+i:hover{
+    color: #fbff00a1;
+}
+
+/* CLASS */
+
+.cabin-font{
+    font-family:'Cabin', sans-serif;
+}
+.card{
+    background: #e443432d!important;
+    box-shadow: 0 8px 32px 0 #1f268748!important;
+    backdrop-filter: blur( 20px )!important;
+    -webkit-backdrop-filter: blur( 20px )!important;
+    border-radius: 10px!important;
+    border: 1px solid #fffc3d4d!important;
+}
+.card:hover{
+    background: #9013fe50!important;
+    box-shadow: 0 8px 32px 0 #1f268794!important;
+    backdrop-filter: blur( 20px )!important;
+    -webkit-backdrop-filter: blur( 20px )!important;
+    border-radius: 10px!important;
+    border: 0px solid #fffc3d67!important;
+}
+
+.nav-link:hover, .navbar-brand:hover{
+    color:#c300ff !important;
+}
+
+
+.fs-20{
+    font-size: 20px;
+}
+
+.fs-card{
+    font-size:32px;
+}
+
+.fs-home{
+    font-size:24px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width:991px){
+
+    .fs-card{
+        font-size:22px;
+    }
+
+    .px-5{
+        padding:0 !important;
+        margin:0 !important;
+    }
+
+    .pe-5{
+        padding:0 !important;
+    }
+
+    .mx-5{
+        margin:0 !important;
+    }
+
+    .navbar-dark .navbar-toggler {
+        color: #1a1524;
+        border:#1a1524;
+    }
+
+    .navbar-dark .navbar-toggler:hover {
+        color: #b638ff;
+        border:#b638ff;
+    }
+}
+
+
