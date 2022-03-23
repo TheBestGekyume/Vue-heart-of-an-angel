@@ -30,7 +30,7 @@ seja bem-vinde ao meu mundinho❤️
         <div class="row">
             <div class="col-4 col-md-5"></div>
             <div class="col-4 col-md-2"> 
-                <img class="img-fluid rounded-circle mx-auto d-block" src="src\assets\logo.png" alt="">
+                <img class="img-fluid rounded-circle mx-auto d-block" src="src\assets\img\footer_image.jpg" alt="">
             </div>
         </div>
     </section>  
