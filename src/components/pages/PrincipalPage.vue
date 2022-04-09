@@ -30,16 +30,16 @@ seja bem-vinde ao meu mundinho❤️
         <div class="row">
             <div class="col-4 col-md-5"></div>
             <div class="col-4 col-md-2"> 
-                <img class="img-fluid rounded-circle mx-auto d-block" src="src\assets\img\footer_image.jpg" alt="">
+                <img class="img-fluid rounded-circle mx-auto d-block" src="../../assets/img/footer_image.jpg" alt="">
             </div>
         </div>
     </section>  
 
     <footer id="footer" class="container-fluid bg-purple-4">
         <div class="row">
-            <div class="col-3 col-md-5"></div>
-            <div class="col-8 col-md-4">
-                <a class="text-decoration-none" href="https://www.instagram.com/juuux_maia/" target="blank">  
+            <div class="col-2 col-md-5"></div>
+            <div class="col-9 col-md-4">
+                <a class="text-decoration-none p-2" href="https://www.instagram.com/juuux_maia/" target="blank">  
                     <i class="bi bi-instagram"> JUUUX</i> 
                 </a>
             </div>
