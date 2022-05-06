@@ -11,6 +11,7 @@ const poemaController = {
         this.poema.image = document.getElementById("image").value;
         this.poema.date = document.getElementById("date").value;
         this.poema.textp = document.getElementById("textP").value;
+        this.poema.desc = document.getElementById("desc").value;
 
     },
     updateDataForm: function (poema = new Poema) { // //Pega as informações do objeto poema e manda para o formulario
@@ -18,6 +19,7 @@ const poemaController = {
         document.getElementById("image").value = poema.image;
         document.getElementById("date").value = poema.date;
         document.getElementById("textP").value = poema.textp;
+        document.getElementById("desc").value = poema.desc;
         
     },
     

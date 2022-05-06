@@ -1,40 +1,11 @@
 <template>
 <section id="poesias" class="container mt-4">
-    <div class="row cabin-font mb-4 text-center ">
-        <a href="" style="max-width: 30%;">
-            <div class="card preto">
-                <div class="mt-3 my-1">
-                    <h3 class=" fs-card ">Nome do Poema</h3>
-                </div>
-                <img src="https://picsum.photos/400/200" class="">
-                <p class="mb-0 mt-1 ">Descrição do poema...</p>
-            </div>
-        </a>
-        <span style="max-width:5%;"></span>
-        <a href="" style="max-width: 30%;">
-            <div class="card preto ">
-                <div class="mt-3 my-1">
-                    <h3 class=" fs-card ">Nome do Poema</h3>
-                </div>
-                <img src="https://picsum.photos/400/200" class="" alt="...">
-                <p class="mb-0 mt-1 ">Descrição do poema...</p>
-            </div>
-        </a>
-        <span style="max-width:5%;"></span>
-            <a href="" style="max-width: 30%;">
-            <div class="card preto ">
-                <div class="mt-3 my-1">
-                    <h3 class=" fs-card ">Nome do Poema</h3>
-                </div>
-                <img src="https://picsum.photos/400/200" class="" alt="...">
-                <p class="mb-0 mt-1 ">Descrição do poema...</p>
-            </div>
-        </a>
-    </div>
 
-    <div class="row cabin-font mb-4 text-center ">
-        <a href="" style="max-width: 30%;">
-            <div class="card preto">
+<div class="row cabin-font mb-4 text-center"> 
+<!-- CARD -->
+    <div class="mb-4 col-md-4 col-12 ">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-1">
+            <div  class="card preto">
                 <div class="mt-3 my-1">
                     <h3 class=" fs-card ">Nome do Poema</h3>
                 </div>
@@ -42,31 +13,92 @@
                 <p class="mb-0 mt-1 ">Descrição do poema...</p>
             </div>
         </a>
-        <span style="max-width:5%;"></span>
-        <a href="" style="max-width: 30%;">
-            <div class="card preto ">
-                <div class="mt-3 my-1">
-                    <h3 class=" fs-card ">Nome do Poema</h3>
+    </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
                 </div>
-                <img src="https://picsum.photos/400/200" class="" alt="...">
-                <p class="mb-0 mt-1 ">Descrição do poema...</p>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
             </div>
-        </a>
-        <span style="max-width:5%;"></span>
-            <a href="" style="max-width: 30%;">
-            <div class="card preto ">
+        </div>
+    </div>
+<!-- CARD -->
+    <div class="mb-4 col-md-4 col-12 ">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-2">
+            <div  class="card preto">
                 <div class="mt-3 my-1">
                     <h3 class=" fs-card ">Nome do Poema</h3>
                 </div>
-                <img src="https://picsum.photos/400/200" class="" alt="...">
+                <img src="https://picsum.photos/400/200" class="">
                 <p class="mb-0 mt-1 ">Descrição do poema...</p>
             </div>
         </a>
     </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                </div>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- CARD -->
+    <div class="mb-4 col-md-4 col-12 ">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-3">
+            <div  class="card preto">
+                <div class="mt-3 my-1">
+                    <h3 class=" fs-card ">Nome do Poema</h3>
+                </div>
+                <img src="https://picsum.photos/400/200" class="">
+                <p class="mb-0 mt-1 ">Descrição do poema...</p>
+            </div>
+        </a>
+    </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                </div>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <div class="row cabin-font mb-4 text-center ">
-        <a href="" style="max-width: 30%;">
-            <div class="card preto">
+<div class="row cabin-font mb-4 text-center"> 
+<!-- CARD -->
+    <div class="mb-4 col-md-4 col-12">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-4">
+            <div  class="card preto">
                 <div class="mt-3 my-1">
                     <h3 class=" fs-card ">Nome do Poema</h3>
                 </div>
@@ -74,35 +106,191 @@
                 <p class="mb-0 mt-1 ">Descrição do poema...</p>
             </div>
         </a>
-        <span style="max-width:5%;"></span>
-        <a href="" style="max-width: 30%;">
-            <div class="card preto ">
-                <div class="mt-3 my-1">
-                    <h3 class=" fs-card ">Nome do Poema</h3>
+    </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
                 </div>
-                <img src="https://picsum.photos/400/200" class="" alt="...">
-                <p class="mb-0 mt-1 ">Descrição do poema...</p>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
             </div>
-        </a>
-        <span style="max-width:5%;"></span>
-            <a href="" style="max-width: 30%;">
-            <div class="card preto ">
+        </div>
+    </div>
+<!-- CARD -->
+    <div class="mb-4 col-md-4 col-12">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-5">
+            <div  class="card preto">
                 <div class="mt-3 my-1">
                     <h3 class=" fs-card ">Nome do Poema</h3>
                 </div>
-                <img src="https://picsum.photos/400/200" class="" alt="...">
+                <img src="https://picsum.photos/400/200" class="">
                 <p class="mb-0 mt-1 ">Descrição do poema...</p>
             </div>
         </a>
     </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                </div>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
+            </div>
+        </div>
+    </div>
+<!--ESPAÇO-->
+     <!-- <span class="mw_space "></span>  -->
+     <!-- CARD -->
+    <div class="mb-4 col-md-4 col-12">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-6">
+            <div  class="card preto">
+                <div class="mt-3 my-1">
+                    <h3 class=" fs-card ">Nome do Poema</h3>
+                </div>
+                <img src="https://picsum.photos/400/200" class="">
+                <p class="mb-0 mt-1 ">Descrição do poema...</p>
+            </div>
+        </a>
+    </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                </div>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row cabin-font mb-4 text-center"> 
+<!-- CARD -->
+    <div class="mb-4 col-md-4 col-12">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-7">
+            <div  class="card preto">
+                <div class="mt-3 my-1">
+                    <h3 class=" fs-card ">Nome do Poema</h3>
+                </div>
+                <img src="https://picsum.photos/400/200" class="">
+                <p class="mb-0 mt-1 ">Descrição do poema...</p>
+            </div>
+        </a>
+    </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                </div>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- CARD -->
+    <div class="mb-4 col-md-4 col-12">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-8">
+            <div  class="card preto">
+                <div class="mt-3 my-1">
+                    <h3 class=" fs-card ">Nome do Poema</h3>
+                </div>
+                <img src="https://picsum.photos/400/200" class="">
+                <p class="mb-0 mt-1 ">Descrição do poema...</p>
+            </div>
+        </a>
+    </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                </div>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
+            </div>
+        </div>
+    </div>
+<!--ESPAÇO-->
+     <!-- <span class="mw_space "></span>  -->
+     <!-- CARD -->
+    <div class="mb-4 col-md-4 col-12">
+        <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-9">
+            <div  class="card preto">
+                <div class="mt-3 my-1">
+                    <h3 class=" fs-card ">Nome do Poema</h3>
+                </div>
+                <img src="https://picsum.photos/400/200" class="">
+                <p class="mb-0 mt-1 ">Descrição do poema...</p>
+            </div>
+        </a>
+    </div>
+<!--MODAL-->
+    <div class="modal fade" id="Modal-9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog text-center">
+            <div class="modal-content text-center">
+                <div class="modal_header bg-purple container">
+                   <div class="row">
+                        <div class="col-2"></div>
+                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                </div>
+                <div class="modal-body">
+                    TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
     </section>
        
 </template>
 
 <script>
-export default {
+export default{};
 
-};
 </script>
 
 <style scoped>
@@ -127,6 +315,13 @@ export default {
     font-size:32px;
 }
 
+/* i{
+    color: white;
+    font-size: 30px;
+    padding:0px 0px 0px 30px ;
+    margin-top:22px;
+
+} */
 a{
     text-decoration: none;
 }
@@ -135,10 +330,35 @@ p{
     border: 0;
 }
 
-/* @media screen and (max-width:991px){
+.modal_header{  
+    text-align: center !important;
+    display: inline !important;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #999999;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+    background-color: #2b2b2b;
+}
 
+.modal-body{
+    background-color: #222222 !important ;
+    color: rgb(224, 224, 224);
+}
+
+#Modal_title{
+    color: white !important;
+}
+
+@media screen and (max-width:991px){
     .fs-card{
-        font-size:22px;
-    } */
-    
+        font-size:24px;
+    };
+
+    /* .card_margin{
+        padding-bottom: 5%
+    }; */
+
+}
 </style>
