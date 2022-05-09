@@ -1,7 +1,7 @@
 <template>
    <nav class="navbar navbar-expand-lg navbar-dark bg-purple-3">
         <div class="container">
-            <a id="Home" class="navbar-brand" href="/"><h1 class="fw-bold">Julia Maia</h1></a>
+            <router-link id="Home" class="navbar-brand" to="/"><h1 class="fw-bold">Julia Maia</h1></router-link>
         </div>
     </nav>
 
@@ -10,31 +10,31 @@
     <div class= "cabin-font border-2 preto p-4 rounded-3">
         <div class="form-group mb-3">
             <label for="name" class="form-label">Nome do Poema</label>
-            <input type="text" class="form-control required" id="title" name="title" placeholder="Digite o título do poema">
+            <input v-model="title" type="text" class="form-control required" id="title" name="title" placeholder="Digite o título do poema">
             <span class="textErro">digite o título do poema.</span>
         </div>
 
         <div class="form-group mb-3">
             <label for="image" class="form-label">Imagem do Poema</label>
-            <input type="file" class="form-control required" id="image" name="image" placeholder="">
+            <input type="file" class="form-control required" id="image" name="image" placeholder=""> <!--v-model="image"--> 
             <span class="textErro">insira uma imagem para representar o poema.</span>
         </div>
 
         <div class="form-group mb-3">
             <label for="date" class="form-label">Data</label>
-            <input type="date" class="form-control required" id="date" name="date" placeholder="dd/mm/aaaa">
+            <input v-model="date" type="date" class="form-control required" id="date" name="date" placeholder="dd/mm/aaaa">
             <span class="textErro">insira a data que o poema foi criado.</span>
         </div>
 
         <div class="form-group mb-3" >
             <label for="text" class="form-label">Poema</label>
-            <textarea type="text" class="form-control required" id="textP" name="text" rows="10" placeholder="Escreva o Poema aqui"> </textarea>
+            <textarea v-model="textpoem" type="text" class="form-control required" id="textP" name="text" rows="10" placeholder="Escreva o Poema aqui"> </textarea>
             <span class="textErro">escreva o conteudo do poema.</span>
         </div>
 
         <div class="mt-5">
             <button id="button_save" type="button" class="button btn btn-dark btn-lg px-5" onclick="poemaController.addPoema()">Salvar</button>
-            <button id="button_cancel" type="button" class="button btn btn-dark btn-lg px-5 mx-3" onclick="poemaController.excluir()">Cancelar</button>
+            <button id="button_cancel" type="button" class="button btn btn-dark btn-lg px-5 mx-3" ><router-link id="router-cancel" to="/">Cancelar</router-link></button>
             <button id="button_list" type="button" class="button btn btn-dark btn-lg px-5 mx-3" onclick="poemaController.getAllPoema()">Listar Poemas</button>
         </div>
         </div> 
@@ -160,7 +160,10 @@ button{
 .fs-form{
     font-size:26px;
 }
-
+#router-cancel{
+    text-decoration:none ;
+    color:white;
+}
 /* MOBILE */
 
 @media screen and (max-width:991px){

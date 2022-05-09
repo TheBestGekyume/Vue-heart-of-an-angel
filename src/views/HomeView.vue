@@ -1,6 +1,5 @@
 <template>
   <main class="home">
-    
     <NavbarPage/>
     <HeaderPage/>
     <CardPage/>

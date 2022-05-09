@@ -7,7 +7,7 @@
         <a href=""  data-bs-toggle="modal" data-bs-target="#Modal-1">
             <div  class="card preto">
                 <div class="mt-3 my-1">
-                    <h3 class=" fs-card ">Nome do Poema</h3>
+                    <h3 class="fs-card ">Nome do Poema</h3>
                 </div>
                 <img src="https://picsum.photos/400/200" class="">
                 <p class="mb-0 mt-1 ">Descrição do poema...</p>
@@ -15,19 +15,23 @@
         </a>
     </div>
 <!--MODAL-->
-    <div class="modal fade" id="Modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+    <div class="modal" id="Modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
         <div class="modal-dialog text-center">
             <div class="modal-content text-center">
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                 </div>
                 <div class="modal-body">
                     TEXTO DO POEMA TEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMATEXTO DO POEMA
+                </div>
+                <div class="modal_footer pe-2 pt-3"> 
+                    <p class="text-end"> 09/08/2020 </p>
+                    <p> Descrição</p>
                 </div>
             </div>
         </div>
@@ -51,7 +55,7 @@
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
@@ -81,7 +85,7 @@
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
@@ -114,7 +118,7 @@
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
@@ -144,7 +148,7 @@
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
@@ -176,7 +180,7 @@
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
@@ -209,7 +213,7 @@
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
@@ -239,7 +243,7 @@
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
@@ -271,7 +275,7 @@
                 <div class="modal_header bg-purple container">
                    <div class="row">
                         <div class="col-2"></div>
-                        <h2 class="text-center col-8" id="Modal_title">Titulo</h2>
+                        <h2 class="text-center col-8 Modal_title" id="">Titulo</h2>
                         <button type="button" class="btn-close ps-5 col-2" data-bs-dismiss="modal"></button> 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
@@ -342,12 +346,17 @@ p{
     background-color: #2b2b2b;
 }
 
-.modal-body{
-    background-color: #222222 !important ;
-    color: rgb(224, 224, 224);
+.modal-body, .modal_footer{
+    background-color: #222222 !important;
+    color: #e0e0e0;
+    
+}
+.modal_footer{
+    border-color: white;
+    border-top: solid 1px;
 }
 
-#Modal_title{
+.Modal_title{
     color: white !important;
 }
 
