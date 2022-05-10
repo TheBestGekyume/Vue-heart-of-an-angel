@@ -1,17 +1,17 @@
 export class Poema {
     constructor(
         id = null,
-        title = "",
-        date = null,
-        image = "",
-        textpoem = "",
-        descricao = ""
+        title_poem = "",
+        date_poem = null,
+        image_poem = "",
+        text_poem = "",
+        descricao_poem = ""
     ) {
         this.id = id;
-        this.title = title;
-        this.date = date;
-        this.image = image;
-        this.texpoem = textpoem;
-        this.descrição = descricao;
+        this.title_poem = title_poem;
+        this.date_poem = date_poem;
+        this.image_poem = image_poem;
+        this.tex_poem = text_poem;
+        this.descricao_poem = descricao_poem;
     }
-};
+}

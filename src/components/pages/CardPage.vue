@@ -9,7 +9,7 @@
                 <div class="mt-3 my-1">
                     <h3 class="fs-card ">Nome do Poema</h3>
                 </div>
-                <img src="https://picsum.photos/400/200" class="">
+                <img src="@/assets/img/borboleta_teste.jpg" class="">
                 <p class="mb-0 mt-1 ">Descrição do poema...</p>
             </div>
         </a>
