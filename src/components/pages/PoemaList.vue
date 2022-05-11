@@ -6,7 +6,7 @@
         <a
           href=""
           data-bs-toggle="modal"
-          data-bs-target="#Modal-1"
+          data-bs-target="#modal"
           @click="selecionarPoema(poema)"
         >
           <div class="card preto">
@@ -23,7 +23,7 @@
   <!--MODAL-->
   <div
     class="modal"
-    id="Modal-1"
+    id="modal"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
@@ -62,63 +62,53 @@
 <script>
 // import { Poema } from "@/models/Poema";
 import PoemaService from "@/services/poemaService.js";
-// import { configure } from "@/services/config";
-// var monkPoema = [
+//import { configure } from "@/services/config";
+
+ var poemas = []
 //   {
-//     name: "Celular",
-//     descricao: "Celular 4g",
+//     id: 0,
+//     title_poem: "Poema teste",
+//     image_poem: "/img/borboleta_teste.jpg",
+//     text_poem: "POEMAAAAAA",
+//     descricao_poem: "OK",
+//     date_poem: "11/02/2021"
 //   },
 //   {
-//     name: "Celular2",
-//     descricao: "Celular 5g",
+//     id: 1,
+//     title_poem: "Poema teste2",
+//     image_poem: "/img/borboleta_teste.jpg",
+//     text_poem: "POEMAAAAAA",
+//     descricao_poem: "OK",
+//   },
+//   {
+//     id: 3,
+//     title_poem: "Poema teste",
+//     image_poem: "/img/borboleta_teste.jpg",
+//     text_poem: "POEMAAAAAA",
+//     descricao_poem: "OK",
+//   },
+//   {
+//     id: 4,
+//     title_poem: "Poema teste",
+//     image_poem: "/img/borboleta_teste.jpg",
+//     text_poem: "POEMAAAAAA",
+//     descricao_poem: "OK",
+//   },
+//   {
+//     id: 5,
+//     title_poem: "Poema teste",
+//     image_poem: "/img/borboleta_teste.jpg",
+//     text_poem: "POEMAAAAAA",
+//     descricao_poem: "OK",
+//   },
+//   {
+//     id: 6,
+//     title_poem: "Poema teste",
+//     image_poem: "/img/borboleta_teste.jpg",
+//     text_poem: "POEMAAAAAA",
+//     descricao_poem: "OK",
 //   },
 // ];
-
-var poemas = [
-  {
-    id: 0,
-    title_poem: "Poema teste",
-    image_poem: "/img/borboleta_teste.jpg",
-    text_poem: "POEMAAAAAA",
-    descricao_poem: "OK",
-    date_poem: "11/02/2021"
-  },
-  {
-    id: 1,
-    title_poem: "Poema teste2",
-    image_poem: "/img/borboleta_teste.jpg",
-    text_poem: "POEMAAAAAA",
-    descricao_poem: "OK",
-  },
-  {
-    id: 3,
-    title_poem: "Poema teste",
-    image_poem: "/img/borboleta_teste.jpg",
-    text_poem: "POEMAAAAAA",
-    descricao_poem: "OK",
-  },
-  {
-    id: 4,
-    title_poem: "Poema teste",
-    image_poem: "/img/borboleta_teste.jpg",
-    text_poem: "POEMAAAAAA",
-    descricao_poem: "OK",
-  },
-  {
-    id: 5,
-    title_poem: "Poema teste",
-    image_poem: "/img/borboleta_teste.jpg",
-    text_poem: "POEMAAAAAA",
-    descricao_poem: "OK",
-  },
-  {
-    id: 6,
-    title_poem: "Poema teste",
-    image_poem: "/img/borboleta_teste.jpg",
-    text_poem: "POEMAAAAAA",
-    descricao_poem: "OK",
-  },
-];
 
 var poemaSelecao = {};
 
@@ -131,14 +121,14 @@ export default {
     };
   },
   mounted() {
-    // this.listarPoemas();
+    this.listarPoemas();
   },
   methods: {
     listarPoemas() {
       PoemaService.list()
         .then((res) => {
           console.log(res);
-          this.Poemas = res.data.result;
+          this.poemas = res.data.result;
         })
         .catch((err) => {
           console.log(err);

@@ -6,12 +6,12 @@ export const configure = {
 
 
 export const http = axios.create({
-    //baseURL: "http://localhost/api/",
-    baseURL: configure.localAPI,
-    headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json;charset=utf-8',
-    }
+    baseURL: "http://localhost/api/",
+    // baseURL: configure.localAPI,
+    // headers: {
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Content-Type': 'application/json;charset=utf-8',
+    // }
 });
 
 http.interceptors.request.use(
