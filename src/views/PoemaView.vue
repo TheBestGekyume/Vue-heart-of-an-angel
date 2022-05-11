@@ -1,4 +1,5 @@
 <template>
+
    <nav class="navbar navbar-expand-lg navbar-dark bg-purple-3">
         <div class="container">
             <router-link id="Home" class="navbar-brand" to="/"><h1 class="fw-bold">Julia Maia</h1></router-link>
@@ -84,9 +85,8 @@
 </template>
 
 <script>
-export default {
+export default {}
 
-}
 </script>
 
 <style>
