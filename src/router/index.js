@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import PoemaView from '../views/PoemaView.vue';
+import PoemaView from '../views/PoemaFormView.vue';
 
 const routes = [
   {

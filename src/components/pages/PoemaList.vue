@@ -1,19 +1,21 @@
 <template>
 <section id="poesias" class="container mt-4">
     <div class="row cabin-font mb-4 text-center">
+     
       <!-- CARD -->
+
       <div class="mb-4 col-md-4 col-12" v-for="poema of poemas" :key="poema.id">
         <a
           href=""
           data-bs-toggle="modal"
           data-bs-target="#modal"
-          @click="selecionarPoema(poema)"
+          @click="selectPoema(poema)"
         >
           <div class="card preto">
             <div class="mt-3 my-1">
               <h3 class="fs-card">{{ poema.title_poem }}</h3>
             </div>
-            <img src="" class="" />
+            <img :src="poema.image_poem" class="img-fluid" /> 
             <p class="mb-0 mt-1">{{ poema.descricao_poem }}</p>
           </div>
         </a>
@@ -21,6 +23,7 @@
     </div>
 
   <!--MODAL-->
+
   <div
     class="modal"
     id="modal"
@@ -28,13 +31,13 @@
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog text-center">
+    <div class="modal-dialog">
       <div class="modal-content text-center">
         <div class="modal_header bg-purple container">
           <div class="row">
             <div class="col-2"></div>
-            <h2 class="text-center col-8 Modal_title" id="">
-              {{ poemaSelecao.title_poem }}
+            <h2 class="col-8 Modal_title" id="">
+              {{ poemaSelected.title_poem }}
             </h2>
             <button
               type="button"
@@ -45,11 +48,11 @@
           </div>
         </div>
         <div class="modal-body">
-          {{ poemaSelecao.text_poem }}
+          <p class="">{{ poemaSelected.text_poem }}</p>
         </div>
         <div class="modal_footer pe-2 pt-3">
-          <p class="text-end">{{ poemaSelecao.date_poem }}</p>
-          <p>{{ poemaSelecao.descricao_poem }}</p>
+          <p class="text-end">{{ poemaSelected.date_poem }}</p>
+          <p>{{ poemaSelected.descricao_poem }}</p>
         </div>
       </div>
     </div>
@@ -62,11 +65,11 @@
 <script>
 // import { Poema } from "@/models/Poema";
 import PoemaService from "@/services/poemaService.js";
-//import { configure } from "@/services/config";
+import { configure } from "@/services/config";
 
- var poemas = []
-//   {
-//     id: 0,
+var poemas = []
+
+//{     id: 0,
 //     title_poem: "Poema teste",
 //     image_poem: "/img/borboleta_teste.jpg",
 //     text_poem: "POEMAAAAAA",
@@ -109,22 +112,23 @@ import PoemaService from "@/services/poemaService.js";
 //     descricao_poem: "OK",
 //   },
 // ];
+  
 
-var poemaSelecao = {};
+var poemaSelected = {};
 
 export default {
   components: {},
   data() {
     return {
       poemas,
-      poemaSelecao,
+      poemaSelected,
     };
   },
   mounted() {
-    this.listarPoemas();
+    this.listPoemas();
   },
   methods: {
-    listarPoemas() {
+    listPoemas() {
       PoemaService.list()
         .then((res) => {
           console.log(res);
@@ -134,8 +138,11 @@ export default {
           console.log(err);
         });
     },
-    selecionarPoema(poema) {
-      this.poemaSelecao = poema;
+    selectPoema(poema) {
+      this.poemaSelected = poema;
+    },
+    showImage(image) {
+      return configure.localHost + "/midias/poemas" + image;
     },
   },
 };
@@ -193,7 +200,6 @@ p{
 .modal-body, .modal_footer{
     background-color: #222222 !important;
     color: #e0e0e0;
-    
 }
 .modal_footer{
     border-color: white;
@@ -204,14 +210,15 @@ p{
     color: white !important;
 }
 
+img{
+  max-height: 200px;
+  max-width:400px;
+}
+
 @media screen and (max-width:991px){
     .fs-card{
         font-size:24px;
     };
-
-    /* .card_margin{
-        padding-bottom: 5%
-    }; */
 
 }
 </style>

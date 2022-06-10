@@ -6,8 +6,8 @@ export const configure = {
 
 
 export const http = axios.create({
-    baseURL: "http://localhost/api/",
-    // baseURL: configure.localAPI,
+    baseURL: "http://localhost/api/",   //API LOCAL
+    // baseURL: configure.localAPI,     //API DA WEB (dist da api que está no host)
     // headers: {
     //     'Access-Control-Allow-Origin': '*',
     //     'Content-Type': 'application/json;charset=utf-8',

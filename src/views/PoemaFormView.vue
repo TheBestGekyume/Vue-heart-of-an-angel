@@ -6,37 +6,104 @@
         </div>
     </nav>
 
-    <form class="container mt-5 fs-form " onchange="poemaController.validRequired()">
+    <form class="container mt-5 fs-form "> <!-- onchange="poemaController.validRequired()" -->
 
     <div class= "cabin-font border-2 preto p-4 rounded-3">
+        
         <div class="form-group mb-3">
             <label for="name" class="form-label">Nome do Poema</label>
-            <input v-model="title" type="text" class="form-control required" id="title" name="title" placeholder="Digite o título do poema">
-            <span class="textErro">digite o título do poema.</span>
+            <input 
+            name="title_poem"
+            v-model="poema.title_poem" 
+            type="text"
+            id="title"
+            class="form-control required"
+            placeholder="Digite o título do poema"
+            aria-describedby="helpId"
+            />
+            
+            <span class="textErro" aria-describedby="helpId">digite o título do poema.</span>
         </div>
 
         <div class="form-group mb-3">
-            <label for="image" class="form-label">Imagem do Poema</label>
-            <input type="file" class="form-control required" id="image" name="image" placeholder=""> <!--v-model="image"--> 
-            <span class="textErro">insira uma imagem para representar o poema.</span>
+            <label for="image_poem" class="form-label">Imagem do Poema</label>
+            <input type="file"
+            class="form-control required"
+            id="files"
+            name="image"
+            placeholder=""
+            ref="files"
+            aria-describedby="helpId"
+            multiple
+            @change="upload()"/>
+            <span class="textErro">Insira uma imagem para representar o poema.</span>
         </div>
 
         <div class="form-group mb-3">
             <label for="date" class="form-label">Data</label>
-            <input v-model="date" type="date" class="form-control required" id="date" name="date" placeholder="dd/mm/aaaa">
-            <span class="textErro">insira a data que o poema foi criado.</span>
+            <input 
+            name="date_poem" 
+            v-model="poema.date_poem" 
+            type="date" 
+            class="form-control required" 
+            id="date" 
+            placeholder="dd/mm/aaaa"
+            aria-describedby="helpId"/>
+            <span class="textErro" aria-describedby="helpId">insira a data que o poema foi criado.</span>
         </div>
 
         <div class="form-group mb-3" >
             <label for="text" class="form-label">Poema</label>
-            <textarea v-model="textpoem" type="text" class="form-control required" id="textP" name="text" rows="10" placeholder="Escreva o Poema aqui"> </textarea>
+            <textarea 
+            name="text_poem"
+            v-model="poema.text_poem" 
+            type="text" 
+            class="form-control required" 
+            id="textP" 
+            rows="10" 
+            placeholder="Escreva o Poema aqui"
+            aria-describedby="helpId"> 
+            </textarea>
             <span class="textErro">escreva o conteudo do poema.</span>
         </div>
 
+        <div class="form-group mb-3">
+            <label for="name" class="form-label">Descrição do Poema</label>
+            <input 
+            name="descricao_poem"
+            v-model="poema.descricao_poem" 
+            type="text"
+            id="descricap"
+            class="form-control required"
+            placeholder="Digite a descricao do poema"
+            aria-describedby="helpId"
+            />
+            <span class="textErro" aria-describedby="helpId">digite a descrição do poema.</span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="name" class="form-label">Ativo</label>
+            <input 
+            name="ativo"
+            v-model="poema.ativo" 
+            type="number"
+            id="ativo"
+            class="form-control required"
+            placeholder=" 1 = poema ativo                                               0 =  poema desativo"
+            aria-describedby="helpId"
+            />
+            
+            <span class="textErro" aria-describedby="helpId">digite o título do poema.</span>
+        </div>
+
         <div class="mt-5">
-            <button id="button_save" type="button" class="button btn btn-dark btn-lg px-5" onclick="poemaController.addPoema()">Salvar</button>
+            <button id="button_save" 
+            type="button"
+            class="button btn btn-dark btn-lg px-5" 
+            @click="cadastrar()"
+            > Salvar </button>
             <button id="button_cancel" type="button" class="button btn btn-dark btn-lg px-5 mx-3" ><router-link id="router-cancel" to="/">Cancelar</router-link></button>
-            <button id="button_list" type="button" class="button btn btn-dark btn-lg px-5 mx-3" onclick="poemaController.getAllPoema()">Listar Poemas</button>
+            <button id="button_list" type="button" class="button btn btn-dark btn-lg px-5 mx-3" >Listar Poemas</button>
         </div>
         </div> 
     </form>
@@ -85,9 +152,52 @@
 </template>
 
 <script>
-export default {}
+import { Poema } from "@/models/Poema"; //{} serve para pegar as classes com o nome defalt
+import PoemaService from "@/services/poemaService";
+//import router from "@/router";
+var poema = new Poema();
+export default {
+  data() {
+    return {
+      poema,
+    };
+  },
+  methods: {
+    cadastrar() {
+      PoemaService.add(this.poema)
+        .then((res) => {
+          console.log(res);
+          alert("Poema Cadastrado!");
+          this.poema = res;
+          //router.push("/");
+        })
+        .catch((err) => {
+          console.error(err);
+          alert("Erro ao cadastrar o poema.");
+        });
+    },
+    upload() {
+      //Cria um novo data form (Dados do Formulario)
+      let dataForm = new FormData();
+      //Pega todos as referencias com o nome files
+      for (let file of this.$refs.files.files) {
+        dataForm.append("file", file);
+      }
+      //Adiciona a lista de objetos do formulario
+      PoemaService.upload(dataForm)
+        .then((res) => {
+          console.log(res);
+          this.poema.fotos = res.data.result;
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Erro ao alterar a foto.");
+        });
+    },
+  },
+};
 
-</script>
+</script>   
 
 <style>
 
